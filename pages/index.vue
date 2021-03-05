@@ -219,6 +219,11 @@ export default {
       return filteredMovies
     },
   },
+  watch: {
+    filter(newVal) {
+      if (newVal) this.currentPage = 1
+    },
+  },
   methods: {
     onPageChange(page) {
       this.currentPage = page
